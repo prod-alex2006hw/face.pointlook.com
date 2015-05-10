@@ -6,7 +6,7 @@ var easyrtc = require("easyrtc");           // EasyRTC external module
 
 // Setup and configure Express http server. Expect a subfolder called "static" to be the web root.
 var httpApp = express();
-httpApp.use(express.static(__dirname + "/static-orig/"));
+httpApp.use(express.static(__dirname + "/static-03/"));
 
 // Start Express http server on port 8200
 var webServer = http.createServer(httpApp).listen(8200);
