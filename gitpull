@@ -1,0 +1,9 @@
+#!/bin/sh
+mkdir tmp;mv face.pointlook.com* tmp/
+rm -rf tmp &
+curl -l -k https://codeload.github.com/prod-alex2006hw/face.pointlook.com/zip/m
+aster > face.pointlook.com.zip
+unzip face.pointlook.com.zip -d .
+rm face.pointlook.com.zip
+mv face.pointlook.com-master face.pointlook.com
+( cd face.pointlook.com;./stopme;./runme )
