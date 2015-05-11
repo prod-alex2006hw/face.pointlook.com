@@ -1,1 +1,3 @@
+(npm i;cd server_example;npm i)
+
 nodemon server_example/server.js
