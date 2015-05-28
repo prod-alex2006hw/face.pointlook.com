@@ -1,3 +1,12 @@
-(npm i;cd server_example;npm i)
+export PATH="$HOME/.local/n/bin:$PATH"
 
-nodemon server_example/server.js
+PWD=`pwd`
+PID=`ps -ef | grep node | grep "$PWD" | awk '{print $2, $3}'`
+
+for pid in $PID; do kill $pid;done
+
+#cp content/data/*db tmp/
+#cp content/data/*openssl src/
+npm install
+#  NODE_ENV=development forever start $PWD/app.js
+NODE_ENV=development nodemon server_example/server.js 2>&1 > ./log/live.alex2006hw.com.log &
